@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Galerie d'images d'Aisaka Taiga en tenue de cowgirl, générées par IA. Découvrez 4 illustrations uniques.">
+    <meta name="robots" content="index, follow">
+    <link rel="icon" href="favicon.ico">
+    <title>Aisaka Taiga Cowgirl - Galerie d'images (IA)</title>
+    <style>
+        /* Minimal CSS Reset */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Styles spécifiques à la page */
+        body {
+            font-family: Arial, sans-serif;
+            background: #000; /* Fond noir */
+            color: #ddd; /* Texte clair pour contraste */
+            min-height: 100vh;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #fff; /* Titre blanc */
+            margin-bottom: 25px;
+            text-align: center;
+        }
+
+        img {
+            max-width: 90%;
+            width: clamp(300px, 80vw, 700px);
+            height: auto;
+            margin: 15px 0;
+            border-radius: 12px;
+            /* L'ombre sombre sera moins visible sur un fond noir.
+               Si vous voulez un "glow" clair, changez le rgba en une couleur claire, ex: 0 4px 20px rgba(255,255,255,0.2); */
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Augmenté l'opacité pour qu'elle soit un peu plus visible sur fond noir */
+            transition: transform 0.2s ease-in-out;
+        }
+
+        img:hover {
+            transform: scale(1.02);
+        }
+
+        /* Styles pour les petits écrans */
+        @media (max-width: 600px) {
+            body {
+                padding: 15px;
+            }
+            h1 {
+                font-size: 1.8em;
+            }
+            img {
+                margin: 10px 0;
+                border-radius: 8px;
+                box-shadow: 0 2px 10px rgba(0,0,0,0.4); /* Ajusté aussi pour les petits écrans */
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Aisaka Taiga – Cowgirl (AI Art)</h1>
+
+    <img src="https://pbs.twimg.com/media/G3eDn1BXoAAWsWo.jpg" alt="Aisaka Taiga en tenue de cowgirl, image 1 générée par IA">
+    <img src="https://pbs.twimg.com/media/G3eDn1eWwAAMc3T.jpg" alt="Aisaka Taiga en tenue de cowgirl, image 2 générée par IA">
+    <img src="https://pbs.twimg.com/media/G3eDn4MWEAE-5Sf.jpg" alt="Aisaka Taiga en tenue de cowgirl, image 3 générée par IA">
+    <img src="https://pbs.twimg.com/media/G3eDn6pWIAArL8z.jpg" alt="Aisaka Taiga en tenue de cowgirl, image 4 générée par IA">
+</body>
+</html>
