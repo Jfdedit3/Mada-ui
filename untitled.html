@@ -16,6 +16,29 @@
             padding: 0;
         }
 
+        /* Keyframe Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInScale {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
         /* Styles spécifiques à la page */
         body {
             font-family: Arial, sans-serif;
@@ -27,12 +50,16 @@
             flex-direction: column;
             align-items: center;
             padding: 20px;
+            overflow-x: hidden; /* Empêche le défilement horizontal potentiel lors des animations */
         }
 
         h1 {
             color: #fff; /* Titre blanc */
             margin-bottom: 25px;
             text-align: center;
+            opacity: 0; /* Caché par défaut pour l'animation */
+            animation: fadeInUp 1s ease-out forwards; /* Animation d'introduction */
+            animation-delay: 0.5s; /* Démarre après 0.5 seconde */
         }
 
         img {
@@ -41,11 +68,18 @@
             height: auto;
             margin: 15px 0;
             border-radius: 12px;
-            /* L'ombre sombre sera moins visible sur un fond noir.
-               Si vous voulez un "glow" clair, changez le rgba en une couleur claire, ex: 0 4px 20px rgba(255,255,255,0.2); */
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Augmenté l'opacité pour qu'elle soit un peu plus visible sur fond noir */
-            transition: transform 0.2s ease-in-out;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+            opacity: 0; /* Caché par défaut pour l'animation */
+            animation: fadeInScale 0.8s ease-out forwards; /* Animation d'introduction */
+            transition: transform 0.2s ease-in-out; /* Conserve la transition pour le survol */
         }
+
+        /* Animation stagger pour les images */
+        img:nth-of-type(1) { animation-delay: 1.2s; } /* Démarre après le titre */
+        img:nth-of-type(2) { animation-delay: 1.5s; }
+        img:nth-of-type(3) { animation-delay: 1.8s; }
+        img:nth-of-type(4) { animation-delay: 2.1s; }
+
 
         img:hover {
             transform: scale(1.02);
@@ -62,7 +96,7 @@
             img {
                 margin: 10px 0;
                 border-radius: 8px;
-                box-shadow: 0 2px 10px rgba(0,0,0,0.4); /* Ajusté aussi pour les petits écrans */
+                box-shadow: 0 2px 10px rgba(0,0,0,0.4);
             }
         }
     </style>
